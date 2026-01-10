@@ -8,12 +8,18 @@
     background-color: white;
     width: 700px;
     height: 100vh;
-    padding: 12px;
+    padding: 30px 20px;
+    margin: 30px;
+    border-radius: 12px;
 }
 .main {
     display: flex;
     justify-content: center;
-    background-color: steelblue;
+    background-color: #1C4D8D;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .input-txt {
@@ -21,15 +27,47 @@
     border: none;
     height: 35px;
     padding: 10px;
+    font-size: 12px;
 }
-input:focus {
+.input-txt:focus {
     outline: none;
 }
-.heading {
+.title-name {
     margin-left: 15px;
 }
 .horizontal {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+}
+.genderBox{
+    padding: 10px;
+}
+fieldset{
+    border-radius: 3px 12px;
+    margin: 12px 0px;
+}
+#submit-btn{
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    background-color: #4988C4;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+}
+#submit-btn:hover{
+    transform: scale(1.01);
+    transition: all ease-out 0.2s;
+
+}
+fieldset:hover{
+    transform: scale(1.01);
+    transition: all ease-out 0.2s;
+
+}
+.error-message{
+    font-size: 12px;
+    color: red;
 }

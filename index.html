@@ -10,39 +10,89 @@
         <div class="main">
             <div class="container">
                 <h1>Registration Form</h1>
-                <form action="">
+                <form action="" name="Form" id="my-form">
                     <fieldset>
-                        <legend class="heading">Name</legend>
-                        <input class="input-txt" type="text" placeholder="Enter the Name" />
+                        <legend class="title-name">Name</legend>
+                        <input id="name" name="name" class="input-txt" type="text" placeholder="Enter the Name" data-type="name" />
+                        <small id="nameError" class="error-message"> </small>
                     </fieldset>
+
                     <fieldset>
-                        <legend class="heading">Email</legend>
-                        <input class="input-txt" type="email" placeholder="Enter the Email" />
+                        <legend class="title-name">Email</legend>
+                        <input id="email" name="email" class="input-txt" type="email" placeholder="Enter the Email" data-type="email" />
+                        <small id="emailError" class="error-message"></small>
                     </fieldset>
+
                     <div class="horizontal">
                         <fieldset>
-                            <legend class="heading">Phone Number</legend>
-                            <input class="input-txt"
-                                type="number"
-                                placeholder="Enter the Number"
-                            />
+                            <legend class="title-name">Phone Number</legend>
+                            <input id="number" name="number" class="input-txt" type="text" placeholder="Enter the Number" data-type="number"/>
+                            <small id="numberError" class="error-message"></small>
                         </fieldset>
+
                         <fieldset>
-                            <legend class="heading">Birth Date</legend>
-                            <input class="input-txt" type="date" placeholder="Enter the Email" />
+                            <legend class="title-name">Birth Date</legend>
+                            <input id="DOB" name="DOB" class="input-txt" type="date" data-type="DOB"/>
+                            <small id="DOBError" class="error-message"></small>
                         </fieldset>
                     </div>
-                    <fieldset>
-                        <legend>Gender</legend>
-                        <input type="radio" name="" id="male">
+
+                    <fieldset class="genderBox">
+                        <legend class="title-name">Gender</legend>
+                        <input type="radio" name="gender" value="male" id="male">
                         <label for="male">Male</label>
-                        <input type="radio" name="" id="female">
-                        <label for="female">female</label>
-                        <input type="radio" name="others" id="others">
-                        <label for="male">Others</label>
+                        
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">Female</label>
+                        
+                        <input type="radio" name="gender" value="others" id="others">
+                        <label for="others">Others</label>
+                        <br>
+                        <small id="genderError" class="error-message"></small>
                     </fieldset>
+
+                    <fieldset>
+                        <legend class="title-name">Address</legend>
+                        <input id="address" name="address" class="input-txt" type="text" placeholder="Enter Street Address"/>
+                    </fieldset>
+
+                    <div class="horizontal">
+                        <fieldset>
+                            <legend class="title-name">Country</legend>
+                            <select id="country" name="country" class="input-txt">
+                                <option value="">Select your country</option>
+                                <option value="india">India</option>
+                                <option value="japan">Japan</option>
+                                <option value="korea">Korea</option>
+                                <option value="nepal">Nepal</option>
+                            </select>
+                            <small id="countryError" class="error-message"></small>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="title-name">City</legend>
+                            <input id="city" name="city" class="input-txt" type="text" placeholder="Enter your city"  />
+                        </fieldset>
+                    </div>
+
+                    <div class="horizontal">
+                        <fieldset>
+                            <legend class="title-name">Region</legend>
+                            <input id="region" name="region" class="input-txt" type="text" placeholder="Enter your region" data-type="region" />
+                            <small id="regionError" class="error-message"></small>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="title-name">Pincode</legend>
+                            <input id="pincode" name="pincode" class="input-txt" type="number" placeholder="Enter the Pincode" data-type="pincode"/>
+                            <small id="pincodeError" class="error-message"></small>
+                        </fieldset>
+                    </div>
+
+                    <button id="submit-btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
+        <script src="src/script.js"></script>
     </body>
 </html>
